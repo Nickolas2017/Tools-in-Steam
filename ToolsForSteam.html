@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en" data-color-mode="auto" data-light-theme="dark" data-dark-theme="dark" data-a11y-animated-images="system" data-a11y-link-underlines="true" data-turbo-loaded="">  
+<head>
+<style type="text/css">.turbo-progress-bar {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: #0076ff;
+    z-index: 2147483647;
+    transition:
+      width 300ms ease-out,
+      opacity 150ms 150ms ease-in;
+    transform: translate3d(0, 0, 0);
+}
+
+</style>
+      <meta charset="utf-8">
+    <link rel="dns-prefetch" href="https://github.githubassets.com">
+    <link rel="dns-prefetch" href="https://avatars.githubusercontent.com">
+    <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com">
+    <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
+    <link rel="preconnect" href="https://github.githubassets.com" crossorigin="">
+    <link rel="preconnect" href="https://avatars.githubusercontent.com">
+  <body background="https://s3.eu-central-1.amazonaws.com/strapi.dundle.com/steam_team_logo_in_the_foreground_with_various_images_from_games_in_the_background_d17bc961d1.png"></body>  
+    <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/light-7aa84bb7e11e.css"><link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/dark-f65db3e8d171.css"><link data-color-theme="dark_dimmed" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_dimmed-a8258e3c6dda.css"><link data-color-theme="dark_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_high_contrast-7e97d834719c.css"><link data-color-theme="dark_colorblind" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_colorblind-01d869f460be.css"><link data-color-theme="light_colorblind" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/light_colorblind-534f3e971240.css"><link data-color-theme="light_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/light_high_contrast-a8cc7d138001.css"><link data-color-theme="light_tritanopia" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/light_tritanopia-35e9dfdc4f9f.css"><link data-color-theme="dark_tritanopia" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_tritanopia-cf4cc5f62dfe.css">
+  
+      <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/primer-primitives-d9abecd14f1e.css">
+      <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/primer-93aded0ee8a1.css">
+      <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/global-8bed0685a4b5.css">
+      <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/github-4c2776832351.css">
+    <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/repository-4fce88777fa8.css">
+  <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/code-0210be90f4d3.css">
+  
+  
+    <script type="application/json" id="client-env">{"locale":"en","featureFlags":["bypass_copilot_indexing_quota","copilot_immersive_file_preview","copilot_new_references_ui","copilot_attach_folder_reference","copilot_chat_repo_custom_instructions_preview","copilot_chat_retry_on_error","copilot_chat_persist_submitted_input","copilot_conversational_ux_history_refs","copilot_chat_shared_chat_input","copilot_chat_shared_topic_indicator","copilot_chat_shared_repo_sso_banner","copilot_editor_upsells","copilot_dotcom_chat_reduce_telemetry","copilot_free_limited_user","copilot_implicit_context","copilot_no_floating_button","copilot_smell_icebreaker_ux","dotcom_chat_client_side_skills","copilot_new_markdown_renderer","experimentation_azure_variant_endpoint","failbot_handle_non_errors","geojson_azure_maps","ghost_pilot_confidence_truncation_25","ghost_pilot_confidence_truncation_40","github_models_o3_mini_streaming","hovercard_accessibility","issues_react_remove_placeholders","issues_react_blur_item_picker_on_close","issues_react_include_bots_in_pickers","marketing_pages_search_explore_provider","remove_child_patch","sample_network_conn_type","swp_enterprise_contact_form","site_copilot_vscode_link_update","site_proxima_australia_update","issues_react_create_milestone","issues_react_cache_fix_workaround","lifecycle_label_name_updates"]}</script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/wp-runtime-ec681401a54d.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_oddbird_popover-polyfill_dist_popover_js-9da652f58479.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_arianotify-polyfill_ariaNotify-polyfill_js-node_modules_github_mi-3abb8f-d7e6bc799724.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/ui_packages_failbot_failbot_ts-25697e0f4c47.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/environment-04ca94cb6e8a.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_primer_behaviors_dist_esm_index_mjs-0dbb79f97f8f.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_selector-observer_dist_index_esm_js-f690fd9ae3d5.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_relative-time-element_dist_index_js-f6da4b3fa34c.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_auto-complete-element_dist_index_js-node_modules_github_catalyst_-8e9f78-a74b4e0a8a6b.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_text-expander-element_dist_index_js-78748950cb0c.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_filter-input-element_dist_index_js-node_modules_github_remote-inp-b5f1d7-a1760ffda83d.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_markdown-toolbar-element_dist_index_js-ceef33f593fa.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_file-attachment-element_dist_index_js-node_modules_primer_view-co-c44a69-f0c8a795d1fd.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/github-elements-6dd1e7101b16.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/element-registry-d018d1dc6e26.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_braintree_browser-detection_dist_browser-detection_js-node_modules_githu-bb80ec-72267f4e3ff9.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_lit-html_lit-html_js-be8cb88f481b.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_mini-throttle_dist_index_js-node_modules_morphdom_dist_morphdom-e-7c534c-a4a1922eb55f.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_turbo_dist_turbo_es2017-esm_js-e3cbe28f1638.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_remote-form_dist_index_js-node_modules_delegated-events_dist_inde-893f9f-6cf3320416b8.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_color-convert_index_js-e3180fe3bcb3.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_quote-selection_dist_index_js-node_modules_github_session-resume_-69cfcc-ccab506ecf8c.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/ui_packages_updatable-content_updatable-content_ts-439f48470426.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/app_assets_modules_github_behaviors_task-list_ts-app_assets_modules_github_sso_ts-ui_packages-900dde-87ff5f64f4e2.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/app_assets_modules_github_sticky-scroll-into-view_ts-5316a27f9573.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/app_assets_modules_github_behaviors_ajax-error_ts-app_assets_modules_github_behaviors_include-87a4ae-342d9bd8fe36.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/app_assets_modules_github_behaviors_commenting_edit_ts-app_assets_modules_github_behaviors_ht-83c235-42e06545c1fa.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/behaviors-d8de5f97949a.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_delegated-events_dist_index_js-node_modules_github_catalyst_lib_index_js-f6223d90c7ba.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/notifications-global-c05ae0218448.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_virtualized-list_es_index_js-node_modules_github_template-parts_lib_index_js-96453a51f920.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_remote-form_dist_index_js-node_modules_delegated-events_dist_inde-70450e-eecf0d50276f.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/app_assets_modules_github_ref-selector_ts-444d21adce8f.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/codespaces-2a84b6e594a8.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_filter-input-element_dist_index_js-node_modules_github_remote-inp-3eebbd-0763620ad7bf.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_mini-throttle_dist_decorators_js-node_modules_delegated-events_di-e161aa-9d41fb1b6c9e.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_file-attachment-element_dist_index_js-node_modules_github_remote--3c9c82-7238cfcdaa51.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/repositories-09d29ad72c62.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_mini-throttle_dist_index_js-node_modules_github_catalyst_lib_inde-dbbea9-26cce2010167.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/code-menu-41999da1c55f.js"></script>
+    
+    <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/primer-react-8e38c0ecf8b7.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/react-core-07d5162e6662.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/react-lib-f09868a8643f.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/octicons-react-611691cca2f6.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_emotion_is-prop-valid_dist_emotion-is-prop-valid_esm_js-node_modules_emo-62da9f-2df2f32ec596.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_mini-throttle_dist_index_js-node_modules_stacktrace-parser_dist_s-e7dcdd-f7cc96ebae76.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_oddbird_popover-polyfill_dist_popover-fn_js-55fea94174bf.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/notifications-subscriptions-menu-7eba7d01e0ba.js"></script>
+  <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/primer-react.da836b3f0662dcfeb421.module.css">
+  <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/notifications-subscriptions-menu.1bcff9205c241e99cff2.module.css">
+  
+    <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/primer-react.da836b3f0662dcfeb421.module.css">
+  <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/notifications-subscriptions-menu.1bcff9205c241e99cff2.module.css">
+  
+  
+    <title>GitHub - LightCloud0/SWAv2: SWA v2 is an advanced utility designed specifically for integration with Steamtools, streamlining functionality and enhancing user convenience.</title>
+  
+  
+  
+    <meta name="route-pattern" content="/:user_id/:repository" data-turbo-transient="">
+    <meta name="route-controller" content="files" data-turbo-transient="">
+    <meta name="route-action" content="disambiguate" data-turbo-transient="">
+  
+      
+    <meta name="current-catalog-service-hash" content="f3abb0cc802f3d7b95fc8762b94bdcb13bf39634c40c357301c4aa1d67a256fb">
+  
+  
+    <meta name="request-id" content="3B85:2EC4FC:9ACBA3:B51B79:67AC6C18" data-pjax-transient="true"><meta name="html-safe-nonce" content="7273bbf5df57b89bb20d8ed5372cfefdc2c9a16bb3edbd31fc1f6245fe51ad73" data-pjax-transient="true"><meta name="visitor-payload" content="eyJyZWZlcnJlciI6Imh0dHBzOi8vd3d3LmJpbmcuY29tLyIsInJlcXVlc3RfaWQiOiIzQjg1OjJFQzRGQzo5QUNCQTM6QjUxQjc5OjY3QUM2QzE4IiwidmlzaXRvcl9pZCI6IjEzNDU4NDQyNjQ2ODU5MjIxNzEiLCJyZWdpb25fZWRnZSI6InNvdXRoZWFzdGFzaWEiLCJyZWdpb25fcmVuZGVyIjoic291dGhlYXN0YXNpYSJ9" data-pjax-transient="true"><meta name="visitor-hmac" content="04cf1a6e6f6365896268881f24748ec0bbc6b568dc3cc005643da018375fd3a9" data-pjax-transient="true">
+  
+  
+      <meta name="hovercard-subject-tag" content="repository:918824272" data-turbo-transient="">
+  
+  
+    <meta name="github-keyboard-shortcuts" content="repository,copilot" data-turbo-transient="true">
+    
+  
+    <meta name="selected-link" value="repo_source" data-turbo-transient="">
+    <link rel="assets" href="https://github.githubassets.com/">
+  
+      <meta name="google-site-verification" content="Apib7-x98H0j5cPqHWwSMm6dNU4GmODRoqxLiDzdx9I">
+  
+  <meta name="octolytics-url" content="https://collector.github.com/github/collect">
+  
+    <meta name="analytics-location" content="/<user-name>/<repo-name>" data-turbo-transient="true">
+  
+    
+  
+  
+  
+  
+      <meta name="user-login" content="">
+  
+    
+  
+      <meta name="viewport" content="width=device-width">
+  
+      
+  
+        <meta name="description" content="SWA v2 is an advanced utility designed specifically for integration with Steamtools, streamlining functionality and enhancing user convenience. - LightCloud0/SWAv2">
+  
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+  
+      <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+      <meta property="fb:app_id" content="1401488693436528">
+      <meta name="apple-itunes-app" content="app-id=1477376905, app-argument=https://github.com/LightCloud0/SWAv2">
+  
+        <meta name="twitter:image" content="https://opengraph.githubassets.com/867b7b890851ee6ec2376c06d88e9fecaf64385015738f4f6cb3350bc5e4ac62/LightCloud0/SWAv2"><meta name="twitter:site" content="@github"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="GitHub - LightCloud0/SWAv2: SWA v2 is an advanced utility designed specifically for integration with Steamtools, streamlining functionality and enhancing user convenience."><meta name="twitter:description" content="SWA v2 is an advanced utility designed specifically for integration with Steamtools, streamlining functionality and enhancing user convenience. - LightCloud0/SWAv2">
+    <meta property="og:image" content="https://opengraph.githubassets.com/867b7b890851ee6ec2376c06d88e9fecaf64385015738f4f6cb3350bc5e4ac62/LightCloud0/SWAv2"><meta property="og:image:alt" content="SWA v2 is an advanced utility designed specifically for integration with Steamtools, streamlining functionality and enhancing user convenience. - LightCloud0/SWAv2"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="600"><meta property="og:site_name" content="GitHub"><meta property="og:type" content="object"><meta property="og:title" content="GitHub - LightCloud0/SWAv2: SWA v2 is an advanced utility designed specifically for integration with Steamtools, streamlining functionality and enhancing user convenience."><meta property="og:url" content="https://github.com/LightCloud0/SWAv2"><meta property="og:description" content="SWA v2 is an advanced utility designed specifically for integration with Steamtools, streamlining functionality and enhancing user convenience. - LightCloud0/SWAv2">
+    
+  
+  
+  
+  
+        <meta name="hostname" content="github.com">
+  
+  
+  
+          <meta name="expected-hostname" content="github.com">
+  
+  
+    <meta http-equiv="x-pjax-version" content="bfc17a505985c11292eabe2128018d5107eb9b0124f120bc7fc48caea92d2c3d" data-turbo-track="reload">
+    <meta http-equiv="x-pjax-csp-version" content="ace39c3b6632770952207593607e6e0be0db363435a8b877b1f96abe6430f345" data-turbo-track="reload">
+    <meta http-equiv="x-pjax-css-version" content="1cbe62881c6683fcc2281e842b13c8c7970db68222aa70b3bfe0c6b84ec0866f" data-turbo-track="reload">
+    <meta http-equiv="x-pjax-js-version" content="c6dabf3e9ad0ef3711165bd25b9a59965db24d4400496e137fc1aa17dbc61fcb" data-turbo-track="reload">
+  
+    <meta name="turbo-cache-control" content="no-preview" data-turbo-transient="">
+  
+        <meta data-hydrostats="publish">
+    <meta name="go-import" content="github.com/LightCloud0/SWAv2 git https://github.com/LightCloud0/SWAv2.git">
+  
+    <meta name="octolytics-dimension-user_id" content="182565712"><meta name="octolytics-dimension-user_login" content="LightCloud0"><meta name="octolytics-dimension-repository_id" content="918824272"><meta name="octolytics-dimension-repository_nwo" content="LightCloud0/SWAv2"><meta name="octolytics-dimension-repository_public" content="true"><meta name="octolytics-dimension-repository_is_fork" content="false"><meta name="octolytics-dimension-repository_network_root_id" content="918824272"><meta name="octolytics-dimension-repository_network_root_nwo" content="LightCloud0/SWAv2">
+  
+  
+  
+        <link rel="canonical" href="https://github.com/LightCloud0/SWAv2" data-turbo-transient="">
+  
+  
+      <meta name="turbo-body-classes" content="logged-out env-production page-responsive">
+  
+  
+    <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+  
+    <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+  
+    <link rel="mask-icon" href="https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg" color="#000000">
+    <link rel="alternate icon" class="js-site-favicon" type="image/png" href="https://github.githubassets.com/favicons/favicon-dark.png">
+    <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon-dark.svg" data-base-href="https://github.githubassets.com/favicons/favicon">
+  
+  <meta name="theme-color" content="#1e2327">
+  <meta name="color-scheme" content="light dark">
+  
+    <meta name="msapplication-TileImage" content="/windows-tile.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+  
+    <link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+  
+    <style data-styled="active" data-styled-version="5.3.11"></style><style id="ms-consent-banner-main-styles">.w8hcgFksdo30C8w-bygqu{color:#000}.ydkKdaztSS0AeHWIeIHsQ a{color:#0067B8}.erL690_8JwUW-R4bJRcfl{background-color:#EBEBEB;border:none;color:#000}.erL690_8JwUW-R4bJRcfl:enabled:hover{color:#000;background-color:#DBDBDB;box-shadow:0px 4px 10px rgba(0,0,0,0.25);border:none}.erL690_8JwUW-R4bJRcfl:enabled:focus{background-color:#DBDBDB;box-shadow:0px 4px 10px rgba(0,0,0,0.25);border:2px solid #000}.erL690_8JwUW-R4bJRcfl:disabled{opacity:1;color:rgba(0,0,0,0.2);background-color:rgba(0,0,0,0.2);border:none}._1zNQOqxpBFSokeCLGi_hGr{border:none;background-color:#0067B8;color:#fff}._1zNQOqxpBFSokeCLGi_hGr:enabled:hover{color:#fff;background-color:#0067B8;box-shadow:0px 4px 10px rgba(0,0,0,0.25);border:none}._1zNQOqxpBFSokeCLGi_hGr:enabled:focus{background-color:#0067B8;box-shadow:0px 4px 10px rgba(0,0,0,0.25);border:2px solid #000}._1zNQOqxpBFSokeCLGi_hGr:disabled{opacity:1;color:rgba(0,0,0,0.2);background-color:rgba(0,120,215,0.2);border:none}._23tra1HsiiP6cT-Cka-ycB{position:relative;display:flex;z-index:9999;width:100%;background-color:#F2F2F2;justify-content:space-between;text-align:left}div[dir="rtl"]._23tra1HsiiP6cT-Cka-ycB{text-align:right}._1Upc2NjY8AlDn177YoVj0y{margin:0;padding-left:5%;padding-top:8px;padding-bottom:8px}div[dir="rtl"] ._1Upc2NjY8AlDn177YoVj0y{margin:0;padding:8px 5% 8px 0;float:none}._23tra1HsiiP6cT-Cka-ycB svg{fill:none;max-width:none;max-height:none}._1V_hlU-7jdtPiooHMu89BB{display:table-cell;padding:12px;width:24px;height:24px;font-family:Segoe UI, SegoeUI, Arial, sans-serif;font-style:normal;font-weight:normal;font-size:24px;line-height:0}.f6QKJD7fhSbnJLarTL-W-{display:table-cell;vertical-align:middle;padding:0;font-family:Segoe UI, SegoeUI, Arial, sans-serif;font-style:normal;font-weight:normal;font-size:13px;line-height:16px}.f6QKJD7fhSbnJLarTL-W- a{text-decoration:underline}._2j0fmugLb1FgYz6KPuB91w{display:inline-block;margin-left:5%;margin-right:5%;min-width:40%;min-width:calc((150px + 3 * 4px) * 2 + 150px);min-width:-webkit-fit-content;min-width:-moz-fit-content;min-width:fit-content;align-self:center;position:relative}._1XuCi2WhiqeWRUVp3pnFG3{margin:4px;padding:5px;min-width:150px;min-height:36px;vertical-align:top;cursor:pointer;font-family:Segoe UI, SegoeUI, Arial, sans-serif;font-style:normal;font-weight:normal;font-size:15px;line-height:20px;text-align:center}._1XuCi2WhiqeWRUVp3pnFG3:focus{box-sizing:border-box}._1XuCi2WhiqeWRUVp3pnFG3:disabled{cursor:not-allowed}._2bvsb3ubApyZ0UGoQA9O9T{display:block;position:fixed;z-index:10000;top:0;left:0;width:100%;height:100%;background-color:rgba(255,255,255,0.6);overflow:auto;text-align:left}div[dir="rtl"]._2bvsb3ubApyZ0UGoQA9O9T{text-align:right}div[dir="rtl"] ._2bvsb3ubApyZ0UGoQA9O9T{left:auto;right:0}.AFsJE948muYyzCMktdzuk{position:relative;top:8%;margin-bottom:40px;margin-left:auto;margin-right:auto;box-sizing:border-box;width:640px;background-color:#fff;border:1px solid #0067B8}._3kWyBRbW_dgnMiEyx06Fu4{float:right;z-index:1;margin:2px;padding:12px;border:none;cursor:pointer;font-family:Segoe UI, SegoeUI, Arial, sans-serif;font-style:normal;font-weight:normal;font-size:13px;line-height:13px;display:flex;align-items:center;text-align:center;color:#666;background-color:#fff}div[dir="rtl"] ._3kWyBRbW_dgnMiEyx06Fu4{margin:2px;padding:12px;float:left}.uCYvKvHXrhjNgflv1VqdD{position:static;margin-top:36px;margin-left:36px;margin-right:36px}._17pX1m9O_W--iZbDt3Ta5r{margin-top:0;margin-bottom:12px;font-family:Segoe UI, SegoeUI, Arial, sans-serif;font-style:normal;font-weight:600;font-size:20px;line-height:24px;text-transform:none}._1kBkHQ1V1wu3kl-YcLgUr6{height:446px;overflow:auto}._20_nXDf6uFs9Q6wxRXG-I-{margin-top:0;font-family:Segoe UI, SegoeUI, Arial, sans-serif;font-style:normal;font-weight:normal;font-size:15px;line-height:20px}._20_nXDf6uFs9Q6wxRXG-I- a{text-decoration:underline}dl._2a0NH_GDQEQe5Ynfo7suVH{margin-top:36px;margin-bottom:0;padding:0;list-style:none;text-transform:none}dt._3j_LCPv7fyXv3A8FIXVwZ4{margin-top:20px;float:none;font-family:Segoe UI, SegoeUI, Arial, sans-serif;font-style:normal;font-weight:600;font-size:18px;line-height:24px;list-style:none}.k-vxTGFbdq1aOZB2HHpjh{margin:0;padding:0;border:none}._2Bucyy75c_ogoU1g-liB5R{margin:0;padding:0;border-bottom:none;font-family:Segoe UI, SegoeUI, Arial, sans-serif;font-style:normal;font-weight:600;font-size:18px;line-height:24px;text-transform:none}._63gwfzV8dclrsl2cfd90r{display:inline-block;margin-top:0;margin-bottom:13px;font-family:Segoe UI, SegoeUI, Arial, sans-serif;font-style:normal;font-weight:normal;font-size:15px;line-height:20px}._1l8wM_4mRYGz3Iu7l3BZR7{display:block}._2UE03QS02aZGkslegN_F-i{display:inline-block;position:relative;left:5px;margin-bottom:13px;margin-right:34px;padding:3px}div[dir="rtl"] ._2UE03QS02aZGkslegN_F-i{margin:0 0 13px 34px;padding:3px;float:none}div[dir="rtl"] ._2UE03QS02aZGkslegN_F-i{left:auto;right:5px}._23tra1HsiiP6cT-Cka-ycB *::before,._2bvsb3ubApyZ0UGoQA9O9T *::before,._23tra1HsiiP6cT-Cka-ycB *::after,._2bvsb3ubApyZ0UGoQA9O9T *::after{box-sizing:inherit}._1HSFn0HzGo6w4ADApV8-c4{outline:2px solid rgba(0,0,0,0.8)}input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2{display:inline-block;position:relative;margin-top:0;margin-left:0;margin-right:0;height:0;width:0;border-radius:0;cursor:pointer;outline:none;box-sizing:border-box;-webkit-appearance:none;-moz-appearance:none;appearance:none}input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2+label::before{display:block;position:absolute;top:5px;left:3px;height:19px;width:19px;content:"";border-radius:50%;border:1px solid #000;background-color:#fff}div[dir="rtl"] input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2+label::before{left:auto;right:3px}input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2:not(:disabled)+label:hover::before{border:1px solid #0067B8}input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2:not(:disabled)+label:hover::after{display:block;position:absolute;top:10px;left:8px;height:9px;width:9px;content:"";border-radius:50%;background-color:rgba(0,0,0,0.8)}div[dir="rtl"] input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2:not(:disabled)+label:hover::after{left:auto;right:8px}input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2:not(:disabled)+label:focus::before{border:1px solid #0067B8}input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2:not(:disabled)+label:focus::after{display:block;position:absolute;top:10px;left:8px;height:9px;width:9px;content:"";border-radius:50%;background-color:#000}div[dir="rtl"] input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2:not(:disabled)+label:focus::after{left:auto;right:8px}input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2:checked+label::after{display:block;position:absolute;top:10px;left:8px;height:9px;width:9px;content:"";border-radius:50%;background-color:#000}div[dir="rtl"] input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2:checked+label::after{left:auto;right:8px}input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2:disabled+label{cursor:not-allowed}input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2:disabled+label::before{border:1px solid rgba(0,0,0,0.2);background-color:rgba(0,0,0,0.2)}._3RJzeL3l9Rl_lAQEm6VwdX{display:block;position:static;float:right;margin-top:0;margin-bottom:0;margin-left:19px;margin-right:0;padding-top:0;padding-bottom:0;padding-left:8px;padding-right:0;width:80%;width:calc(100% - 19px);font-family:Segoe UI, SegoeUI, Arial, sans-serif;font-style:normal;font-weight:normal;font-size:15px;line-height:20px;text-transform:none;cursor:pointer;box-sizing:border-box}div[dir="rtl"] ._3RJzeL3l9Rl_lAQEm6VwdX{margin:0 19px 0 0;padding:0 8px 0 0;float:left}.nohp3sIG12ZBhzcMnPala{margin-top:20px;margin-bottom:48px}._2uhaEsmeotZ3P-M0AXo2kF{padding:0;width:278px;height:36px;cursor:pointer;font-family:Segoe UI, SegoeUI, Arial, sans-serif;font-style:normal;font-weight:normal;font-size:15px;line-height:20px;text-align:center}._2uhaEsmeotZ3P-M0AXo2kF:focus{box-sizing:border-box}._2uhaEsmeotZ3P-M0AXo2kF:disabled{cursor:not-allowed}._3tOu1FJ59c_xz_PmI1lKV5{float:right;padding:0;width:278px;height:36px;cursor:pointer;font-family:Segoe UI, SegoeUI, Arial, sans-serif;font-style:normal;font-weight:normal;font-size:15px;line-height:20px;text-align:center}._3tOu1FJ59c_xz_PmI1lKV5:focus{box-sizing:border-box}._3tOu1FJ59c_xz_PmI1lKV5:disabled{cursor:not-allowed}div[dir="rtl"] ._3tOu1FJ59c_xz_PmI1lKV5{margin:0;padding:0;float:left}@media only screen and (max-width: 768px){._2j0fmugLb1FgYz6KPuB91w,._1Upc2NjY8AlDn177YoVj0y{padding-top:8px;padding-bottom:12px;padding-left:3.75%;padding-right:3.75%;margin:0;width:92.5%}._23tra1HsiiP6cT-Cka-ycB{display:block}._1XuCi2WhiqeWRUVp3pnFG3{margin-bottom:8px;margin-left:0;margin-right:0;width:100%}._2bvsb3ubApyZ0UGoQA9O9T{overflow:hidden}.AFsJE948muYyzCMktdzuk{top:1.8%;width:93.33%;height:96.4%;overflow:hidden}.uCYvKvHXrhjNgflv1VqdD{margin-top:24px;margin-left:24px;margin-right:24px;height:100%}._1kBkHQ1V1wu3kl-YcLgUr6{height:62%;height:calc(100% - 188px);min-height:50%}._2uhaEsmeotZ3P-M0AXo2kF{width:100%}._3tOu1FJ59c_xz_PmI1lKV5{margin-bottom:12px;margin-left:0;width:100%}div[dir="rtl"] ._3tOu1FJ59c_xz_PmI1lKV5{margin:0 0 12px 0;padding:0;float:none}}@media only screen and (max-width: 768px) and (orientation: landscape), only screen and (max-height: 260px), only screen and (max-width: 340px){.AFsJE948muYyzCMktdzuk{overflow:auto}}@media only screen and (max-height: 260px), only screen and (max-width: 340px){._1XuCi2WhiqeWRUVp3pnFG3{min-width:0}._3kWyBRbW_dgnMiEyx06Fu4{padding:3%}.uCYvKvHXrhjNgflv1VqdD{margin-top:3%;margin-left:3%;margin-right:3%}._17pX1m9O_W--iZbDt3Ta5r{margin-bottom:3%}._1kBkHQ1V1wu3kl-YcLgUr6{height:calc(79% - 64px)}.nohp3sIG12ZBhzcMnPala{margin-top:5%;margin-bottom:10%}._3tOu1FJ59c_xz_PmI1lKV5{margin-bottom:3%}div[dir="rtl"] ._3tOu1FJ59c_xz_PmI1lKV5{margin:0 0 3% 0;padding:0;float:none}}
+  </style><style type="text/css" id="ms-consent-banner-theme-styles">._23tra1HsiiP6cT-Cka-ycB {
+              background-color: #24292f !important;
+          }.w8hcgFksdo30C8w-bygqu {
+              color: #ffffff !important;
+          }.ydkKdaztSS0AeHWIeIHsQ a {
+              color: #d8b9ff !important;
+          }._2bvsb3ubApyZ0UGoQA9O9T {
+              background-color: rgba(23, 23, 23, 0.8) !important;
+          }.AFsJE948muYyzCMktdzuk {
+              background-color: #24292f !important;
+              border: 1px solid #d8b9ff !important;
+          }._3kWyBRbW_dgnMiEyx06Fu4 {
+              color: #d8b9ff !important;
+              background-color: #24292f !important;
+          }._1zNQOqxpBFSokeCLGi_hGr {
+              border: 1px solid #ffffff !important;
+              background-color: #ffffff !important;
+              color: #1f2328 !important;
+          }._1zNQOqxpBFSokeCLGi_hGr:enabled:hover {
+              color: #1f2328 !important;
+              background-color: #d8b9ff !important;
+              box-shadow: none !important;
+              border: 1px solid transparent !important;
+          }._1zNQOqxpBFSokeCLGi_hGr:enabled:focus {
+              background-color: #d8b9ff !important;
+              box-shadow: none !important;
+              border: 2px solid #ffffff !important;
+          }._1zNQOqxpBFSokeCLGi_hGr:disabled {
+              opacity: 0.5 !important;
+              color: #1f2328 !important;
+              background-color: #ffffff !important;
+              border: 1px solid transparent !important;
+          }.erL690_8JwUW-R4bJRcfl {
+              border: 1px solid #eaeef2 !important;
+              background-color: #32383f !important;
+              color: #ffffff !important;
+          }.erL690_8JwUW-R4bJRcfl:enabled:hover {
+              color: #ffffff !important;
+              background-color: #24292f !important;
+              box-shadow: none !important;
+              border: 1px solid #ffffff !important;
+          }.erL690_8JwUW-R4bJRcfl:enabled:focus {
+              background-color: #24292f !important;
+              box-shadow: none !important;
+              border: 2px solid #6e7781 !important;
+          }.erL690_8JwUW-R4bJRcfl:disabled {
+              opacity: 0.5 !important;
+              color: #ffffff !important;
+              background-color: #424a53 !important;
+              border: 1px solid #6e7781 !important;
+          }input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2 + label::before {
+              border: 1px solid #d8b9ff !important;
+              background-color: #24292f !important;
+          }._1HSFn0HzGo6w4ADApV8-c4 {
+              outline: 2px solid #ffffff !important;
+          }input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2:checked + label::after {
+              background-color: #d8b9ff !important;
+          }input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2 + label:hover::before {
+              border: 1px solid #ffffff !important;
+          }input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2 + label:hover::after {
+              background-color: #ffffff !important;
+          }input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2 + label:focus::before {
+              border: 1px solid #ffffff !important;
+          }input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2 + label:focus::after {
+              background-color: #d8b9ff !important;
+          }input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2:disabled + label::before {
+              border: 1px solid rgba(227, 227, 227, 0.2) !important;
+              background-color: rgba(227, 227, 227, 0.2) !important;
+          }</style></head>
+  
+    <body class="logged-out env-production page-responsive" style="overflow-wrap: break-word; --dialog-scrollgutter: 15px;" contenteditable="false">
+      <div data-turbo-body="" class="logged-out env-production page-responsive" style="word-wrap: break-word;">
+        
+  
+      <div class="position-relative header-wrapper js-header-wrapper ">
+        <a href="#start-of-content" data-skip-target-assigned="false" class="px-2 py-4 color-bg-accent-emphasis color-fg-on-emphasis show-on-focus js-skip-to-content">Skip to content</a>
+  
+        <span data-view-component="true" class="progress-pjax-loader Progress position-fixed width-full">
+      <span style="width: 0%;" data-view-component="true" class="Progress-item progress-pjax-loader-bar left-0 top-0 color-bg-accent-emphasis"></span>
+  </span>      
+        
+        <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/ui_packages_ui-commands_ui-commands_ts-046dd323b6ce.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/keyboard-shortcuts-dialog-294067067288.js"></script>
+  <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/primer-react.da836b3f0662dcfeb421.module.css">
+  
+  <react-partial partial-name="keyboard-shortcuts-dialog" data-ssr="false" data-attempted-ssr="false" data-catalyst="" class="loaded">
+    
+    <script type="application/json" data-target="react-partial.embeddedData">{"props":{"docsUrl":"https://docs.github.com/get-started/accessibility/keyboard-shortcuts"}}</script>
+    <div data-target="react-partial.reactRoot"><div class="d-none"></div><script type="application/json" id="__PRIMER_DATA_:r0:__">{"resolvedServerColorMode":"night"}</script></div>
+  </react-partial>
+  
+  
+  
+  
+        
+  
+            
+  
+                
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_remote-form_dist_index_js-node_modules_delegated-events_dist_inde-94fd67-73b675cf164a.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/sessions-fc22c41247ca.js"></script>
+  
+  
+        <div hidden="hidden" data-view-component="true" class="js-stale-session-flash stale-session-flash flash flash-warn flash-full">
+    
+          <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+      <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+  </svg>
+          <span class="js-stale-session-flash-signed-in" hidden="">You signed in with another tab or window. <a class="Link--inTextBlock" href="">Reload</a> to refresh your session.</span>
+          <span class="js-stale-session-flash-signed-out" hidden="">You signed out in another tab or window. <a class="Link--inTextBlock" href="">Reload</a> to refresh your session.</span>
+          <span class="js-stale-session-flash-switched" hidden="">You switched accounts on another tab or window. <a class="Link--inTextBlock" href="">Reload</a> to refresh your session.</span>
+  
+      <button id="icon-button-85b58a54-b9ec-4a8b-88d0-83bbc785569f" aria-labelledby="tooltip-95ee91b2-0a4a-457d-a344-471b0f2a0825" type="button" data-view-component="true" class="Button Button--iconOnly Button--invisible Button--medium flash-close js-flash-close">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x Button-visual">
+      <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+  </svg>
+  </button><tool-tip id="tooltip-95ee91b2-0a4a-457d-a344-471b0f2a0825" for="icon-button-85b58a54-b9ec-4a8b-88d0-83bbc785569f" popover="manual" data-direction="s" data-type="label" data-view-component="true" class="sr-only position-absolute" aria-hidden="true" role="tooltip">Dismiss alert</tool-tip>
+  
+  
+    
+  </div>
+      </div>
+  
+    <div id="start-of-content" class="show-on-focus"></div>
+  
+  
+  
+  
+  
+  
+  
+  
+      <div id="js-flash-container" class="flash-container" data-turbo-replace="">
+  
+  
+  
+  
+    <template class="js-flash-template">
+      
+  <div class="flash flash-full   {{ className }}">
+    <div>
+      <button autofocus="" class="flash-close js-flash-close" type="button" aria-label="Dismiss this message">
+        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x">
+      <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+  </svg>
+      </button>
+      <div aria-atomic="true" role="alert" class="js-flash-alert">
+        
+        <div>{{ message }}</div>
+  
+      </div>
+    </div>
+  </div>
+    </template>
+  </div>
+  
+  
+      
+  
+  
+  
+  
+  
+  
+    <div class="application-main " data-commit-hovercards-enabled="" data-discussion-hovercards-enabled="" data-issue-and-pr-hovercards-enabled="" data-project-hovercards-enabled="">
+          <div itemscope="" itemtype="http://schema.org/SoftwareSourceCode" class="">
+      <main id="js-repo-pjax-container">
+  
+  
+          </div>
+  
+          <div id="repository-details-container" class="flex-shrink-0" data-turbo-replace="" style="max-width: 70%;"><br></div>
+        </div>
+  
+          <div id="responsive-meta-container" data-turbo-replace="">
+        <div class="d-block d-md-none mb-2 px-3 px-md-4 px-lg-5">
+        <p class="f4 mb-3 ">
+          SWA v2 is an advanced utility designed specifically for integration with Steamtools, streamlining functionality and enhancing user convenience.
+        </p>
+  
+      
+  
+      <div class="mb-3">
+          <a class="Link--secondary no-underline mr-3" href="/LightCloud0/SWAv2/stargazers">
+            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-star mr-1">
+      <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"></path>
+  </svg>
+            <span class="text-bold">12</span>
+            stars
+  </a>        <a class="Link--secondary no-underline mr-3" href="/LightCloud0/SWAv2/forks">
+            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-repo-forked mr-1">
+      <path d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z"></path>
+  </svg>
+            <span class="text-bold">2</span>
+            forks
+  </a>        <a class="Link--secondary no-underline mr-3 d-inline-block" href="/LightCloud0/SWAv2/branches">
+            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-git-branch mr-1">
+      <path d="M9.5 3.25a2.25 2.25 0 1 1 3 2.122V6A2.5 2.5 0 0 1 10 8.5H6a1 1 0 0 0-1 1v1.128a2.251 2.251 0 1 1-1.5 0V5.372a2.25 2.25 0 1 1 1.5 0v1.836A2.493 2.493 0 0 1 6 7h4a1 1 0 0 0 1-1v-.628A2.25 2.25 0 0 1 9.5 3.25Zm-6 0a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Zm8.25-.75a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5ZM4.25 12a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Z"></path>
+  </svg>
+            <span>Branches</span>
+  </a>        <a class="Link--secondary no-underline d-inline-block" href="/LightCloud0/SWAv2/tags">
+            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-tag mr-1">
+      <path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"></path>
+  </svg>
+            <span>Tags</span>
+  </a>        <a class="Link--secondary no-underline d-inline-block" href="/LightCloud0/SWAv2/activity">
+            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-pulse mr-1">
+      <path d="M6 2c.306 0 .582.187.696.471L10 10.731l1.304-3.26A.751.751 0 0 1 12 7h3.25a.75.75 0 0 1 0 1.5h-2.742l-1.812 4.528a.751.751 0 0 1-1.392 0L6 4.77 4.696 8.03A.75.75 0 0 1 4 8.5H.75a.75.75 0 0 1 0-1.5h2.742l1.812-4.529A.751.751 0 0 1 6 2Z"></path>
+  </svg>
+            <span>Activity</span>
+  </a>    </div>
+  
+        <div class="d-flex flex-wrap gap-2">
+          <div class="flex-1">
+              <div data-view-component="true" class="BtnGroup d-flex">
+          <a href="/login?return_to=%2FLightCloud0%2FSWAv2" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:918824272,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/LightCloud0/SWAv2&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="da61da2765b4a85c2ed4539fe16efbe0b8dfb45486d1bb4982993e0a56bfc175" aria-label="You must be signed in to star a repository" data-view-component="true" class="tooltipped tooltipped-sw btn-sm btn btn-block">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-star v-align-text-bottom d-inline-block mr-2">
+      <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"></path>
+  </svg><span data-view-component="true" class="d-inline">
+            Star
+  </span>
+  </a></div>
+          </div>
+          <div class="flex-1">
+                  <a href="/login?return_to=%2FLightCloud0%2FSWAv2" rel="nofollow" id="files-overview-watch-button" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;notification subscription menu watch&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/LightCloud0/SWAv2&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="3ba055325324300b21bb085cd30c7ace1785e811aacb9e77cb29cc25998ff119" aria-label="You must be signed in to change notification settings" data-view-component="true" class="btn-sm btn btn-block" aria-describedby="tooltip-947465e4-8201-4145-9f47-430ca786d862">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-bell mr-2">
+      <path d="M8 16a2 2 0 0 0 1.985-1.75c.017-.137-.097-.25-.235-.25h-3.5c-.138 0-.252.113-.235.25A2 2 0 0 0 8 16ZM3 5a5 5 0 0 1 10 0v2.947c0 .05.015.098.042.139l1.703 2.555A1.519 1.519 0 0 1 13.482 13H2.518a1.516 1.516 0 0 1-1.263-2.36l1.703-2.554A.255.255 0 0 0 3 7.947Zm5-3.5A3.5 3.5 0 0 0 4.5 5v2.947c0 .346-.102.683-.294.97l-1.703 2.556a.017.017 0 0 0-.003.01l.001.006c0 .002.002.004.004.006l.006.004.007.001h10.964l.007-.001.006-.004.004-.006.001-.007a.017.017 0 0 0-.003-.01l-1.703-2.554a1.745 1.745 0 0 1-.294-.97V5A3.5 3.5 0 0 0 8 1.5Z"></path>
+  </svg>Notifications
+  </a>    <tool-tip id="tooltip-947465e4-8201-4145-9f47-430ca786d862" for="files-overview-watch-button" popover="manual" data-direction="s" data-type="description" data-view-component="true" class="sr-only position-absolute" role="tooltip">You must be signed in to change notification settings</tool-tip>
+  
+          </div>
+          <span>
+            
+  
+          </span>
+        </div>
+    </div>
+  
+  </div>
+  
+  
+            <nav data-pjax="#js-repo-pjax-container" aria-label="Repository" data-view-component="true" class="">
+  
+    <ul data-view-component="true" class="UnderlineNav-body list-style-none">
+        <li data-view-component="true" class="d-inline-flex">
+    <a id="code-tab" href="/LightCloud0/SWAv2" data-tab-item="i0code-tab" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches repo_packages repo_deployments repo_attestations /LightCloud0/SWAv2" data-pjax="#repo-content-pjax-container" data-turbo-frame="repo-content-turbo-frame" data-hotkey="g c" data-analytics-event="{&quot;category&quot;:&quot;Underline navbar&quot;,&quot;action&quot;:&quot;Click tab&quot;,&quot;label&quot;:&quot;Code&quot;,&quot;target&quot;:&quot;UNDERLINE_NAV.TAB&quot;}" aria-current="page" data-view-component="true" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item selected">
+      
+                <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-code UnderlineNav-octicon d-none d-sm-inline">
+      <path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215Zm-6.56 0a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"></path>
+  </svg>
+          <span data-content="Code">Code</span>
+            <span id="code-repo-tab-count" data-pjax-replace="" data-turbo-replace="" title="Not available" data-view-component="true" class="Counter"></span>
+  
+  
+      
+  </a></li>
+        <li data-view-component="true" class="d-inline-flex"><br></li>
+  </ul>
+      <div style="visibility:hidden;" data-view-component="true" class="UnderlineNav-actions js-responsive-underlinenav-overflow position-absolute pr-3 pr-md-4 pr-lg-5 right-0">      <action-menu data-select-variant="none" data-view-component="true" data-catalyst="">
+    <focus-group direction="vertical" mnemonics="" retain="">
+      <button id="action-menu-993032e6-b92d-4330-965c-cce29d4498ca-button" popovertarget="action-menu-993032e6-b92d-4330-965c-cce29d4498ca-overlay" aria-controls="action-menu-993032e6-b92d-4330-965c-cce29d4498ca-list" aria-haspopup="true" aria-labelledby="tooltip-aeb56116-dbe7-422c-971f-3eb06c34ace9" type="button" data-view-component="true" class="Button Button--iconOnly Button--secondary Button--medium UnderlineNav-item">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-kebab-horizontal Button-visual">
+      <path d="M8 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM1.5 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm13 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"></path>
+  </svg>
+  </button><tool-tip id="tooltip-aeb56116-dbe7-422c-971f-3eb06c34ace9" for="action-menu-993032e6-b92d-4330-965c-cce29d4498ca-button" popover="manual" data-direction="s" data-type="label" data-view-component="true" class="sr-only position-absolute" aria-hidden="true" role="tooltip">Additional navigation options</tool-tip>
+  
+  
+  <anchored-position data-target="action-menu.overlay" id="action-menu-993032e6-b92d-4330-965c-cce29d4498ca-overlay" anchor="action-menu-993032e6-b92d-4330-965c-cce29d4498ca-button" align="start" side="outside-bottom" anchor-offset="normal" popover="auto" data-view-component="true" style="inset: 36px auto auto 0px;">
+    <div data-view-component="true" class="Overlay Overlay--size-auto">
+      
+        <div data-view-component="true" class="Overlay-body Overlay-body--paddingNone">          <action-list data-catalyst="">
+    <div data-view-component="true">
+      <ul aria-labelledby="action-menu-993032e6-b92d-4330-965c-cce29d4498ca-button" id="action-menu-993032e6-b92d-4330-965c-cce29d4498ca-list" role="menu" data-view-component="true" class="ActionListWrap--inset ActionListWrap">
+          <li hidden="" data-menu-item="i0code-tab" data-targets="action-list.items" role="none" data-view-component="true" class="ActionListItem">
+      
+      
+      <a tabindex="-1" id="item-a020fae3-ad6a-4c99-bb9b-10347322e274" href="/LightCloud0/SWAv2" role="menuitem" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+          <span class="ActionListItem-visual ActionListItem-visual--leading">
+            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-code">
+      <path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215Zm-6.56 0a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"></path>
+  </svg>
+          </span>
+        
+          <span data-view-component="true" class="ActionListItem-label">
+            Code
+  </span>      
+  </a>
+    
+  </li>
+          <li hidden="" data-menu-item="i1issues-tab" data-targets="action-list.items" role="none" data-view-component="true" class="ActionListItem">
+      
+      
+      <a tabindex="-1" id="item-d19559dc-b767-41f5-86d6-b73a688f6997" href="/LightCloud0/SWAv2/issues" role="menuitem" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+          <span class="ActionListItem-visual ActionListItem-visual--leading">
+            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-issue-opened">
+      <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"></path><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Z"></path>
+  </svg>
+          </span>
+        
+          <span data-view-component="true" class="ActionListItem-label">
+            Issues
+  </span>      
+  </a>
+    
+  </li>
+          <li hidden="" data-menu-item="i2pull-requests-tab" data-targets="action-list.items" role="none" data-view-component="true" class="ActionListItem">
+      
+      
+      <a tabindex="-1" id="item-af42a25e-181c-4643-ae6c-fce54a566ed9" href="/LightCloud0/SWAv2/pulls" role="menuitem" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+          <span class="ActionListItem-visual ActionListItem-visual--leading">
+            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-git-pull-request">
+      <path d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z"></path>
+  </svg>
+          </span>
+        
+          <span data-view-component="true" class="ActionListItem-label">
+            Pull requests
+  </span>      
+  </a>
+    
+  </li>
+          <li hidden="" data-menu-item="i3actions-tab" data-targets="action-list.items" role="none" data-view-component="true" class="ActionListItem">
+      
+      
+      <a tabindex="-1" id="item-db5f9700-349e-4e08-930e-1d505acb4183" href="/LightCloud0/SWAv2/actions" role="menuitem" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+          <span class="ActionListItem-visual ActionListItem-visual--leading">
+            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-play">
+      <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm4.879-2.773 4.264 2.559a.25.25 0 0 1 0 .428l-4.264 2.559A.25.25 0 0 1 6 10.559V5.442a.25.25 0 0 1 .379-.215Z"></path>
+  </svg>
+          </span>
+        
+          <span data-view-component="true" class="ActionListItem-label">
+            Actions
+  </span>      
+  </a>
+    
+  </li>
+          <li hidden="" data-menu-item="i4projects-tab" data-targets="action-list.items" role="none" data-view-component="true" class="ActionListItem">
+      
+      
+      <a tabindex="-1" id="item-1a6a480f-8911-44f4-b377-cd9f5d57a03c" href="/LightCloud0/SWAv2/projects" role="menuitem" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+          <span class="ActionListItem-visual ActionListItem-visual--leading">
+            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-table">
+      <path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0 1 14.25 16H1.75A1.75 1.75 0 0 1 0 14.25ZM6.5 6.5v8h7.75a.25.25 0 0 0 .25-.25V6.5Zm8-1.5V1.75a.25.25 0 0 0-.25-.25H6.5V5Zm-13 1.5v7.75c0 .138.112.25.25.25H5v-8ZM5 5V1.5H1.75a.25.25 0 0 0-.25.25V5Z"></path>
+  </svg>
+          </span>
+        
+          <span data-view-component="true" class="ActionListItem-label">
+            Projects
+  </span>      
+  </a>
+    
+  </li>
+          <li hidden="" data-menu-item="i5security-tab" data-targets="action-list.items" role="none" data-view-component="true" class="ActionListItem">
+      
+      
+      <a tabindex="-1" id="item-ea47c6c3-0c73-49ea-86aa-bf0fdd4d12b1" href="/LightCloud0/SWAv2/security" role="menuitem" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+          <span class="ActionListItem-visual ActionListItem-visual--leading">
+            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-shield">
+      <path d="M7.467.133a1.748 1.748 0 0 1 1.066 0l5.25 1.68A1.75 1.75 0 0 1 15 3.48V7c0 1.566-.32 3.182-1.303 4.682-.983 1.498-2.585 2.813-5.032 3.855a1.697 1.697 0 0 1-1.33 0c-2.447-1.042-4.049-2.357-5.032-3.855C1.32 10.182 1 8.566 1 7V3.48a1.75 1.75 0 0 1 1.217-1.667Zm.61 1.429a.25.25 0 0 0-.153 0l-5.25 1.68a.25.25 0 0 0-.174.238V7c0 1.358.275 2.666 1.057 3.86.784 1.194 2.121 2.34 4.366 3.297a.196.196 0 0 0 .154 0c2.245-.956 3.582-2.104 4.366-3.298C13.225 9.666 13.5 8.36 13.5 7V3.48a.251.251 0 0 0-.174-.237l-5.25-1.68ZM8.75 4.75v3a.75.75 0 0 1-1.5 0v-3a.75.75 0 0 1 1.5 0ZM9 10.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+  </svg>
+          </span>
+        
+          <span data-view-component="true" class="ActionListItem-label">
+            Security
+  </span>      
+  </a>
+    
+  </li>
+          <li hidden="" data-menu-item="i6insights-tab" data-targets="action-list.items" role="none" data-view-component="true" class="ActionListItem">
+      
+      
+      <a tabindex="-1" id="item-687ebeec-f0fa-4364-b35a-fc76335d8244" href="/LightCloud0/SWAv2/pulse" role="menuitem" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+          <span class="ActionListItem-visual ActionListItem-visual--leading">
+            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-graph">
+      <path d="M1.5 1.75V13.5h13.75a.75.75 0 0 1 0 1.5H.75a.75.75 0 0 1-.75-.75V1.75a.75.75 0 0 1 1.5 0Zm14.28 2.53-5.25 5.25a.75.75 0 0 1-1.06 0L7 7.06 4.28 9.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.25-3.25a.75.75 0 0 1 1.06 0L10 7.94l4.72-4.72a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Z"></path>
+  </svg>
+          </span>
+        
+          <span data-view-component="true" class="ActionListItem-label">
+            Insights
+  </span>      
+  </a>
+    
+  </li>
+  </ul>    
+  </div></action-list>
+  
+  
+  </div>
+        
+  </div></anchored-position>  </focus-group>
+  </action-menu></div>
+  </nav>
+  
+    </div>
+  
+    
+  
+  
+  
+  <turbo-frame id="repo-content-turbo-frame" target="_top" data-turbo-action="advance" class="">
+      <div id="repo-content-pjax-container" class="repository-content ">
+      
+  
+  
+  
+      
+        
+    <h1 class="sr-only">LightCloud0/SWAv2</h1>
+    <div class="clearfix container-xl px-md-4 px-lg-5 px-3">
+      <div>
+  
+    <div style="max-width: 100%" data-view-component="true" class="Layout Layout--flowRow-until-md react-repos-overview-margin Layout--sidebarPosition-end Layout--sidebarPosition-flowRow-end">
+    <div data-view-component="true" class="Layout-main">      <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_dompurify_dist_purify_js-b89b98661809.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_tanstack_query-core_build_modern_queryObserver_js-node_modules_tanstack_-defd52-843b41414e0e.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/vendors-node_modules_github_hydro-analytics-client_dist_analytics-client_js-node_modules_gith-853b24-f2006d2a5b98.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/ui_packages_aria-live_aria-live_ts-ui_packages_promise-with-resolvers-polyfill_promise-with-r-014121-0d70b6348d6b.js"></script>
+  
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/ui_packages_ref-selector_RefSelector_tsx-902969d26967.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/ui_packages_code-view-shared_hooks_use-canonical-object_ts-ui_packages_code-view-shared_hooks-a6859a-930930d9b033.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/ui_packages_commit-attribution_index_ts-ui_packages_commit-checks-status_index_ts-ui_packages-4cf6a5-d0709c745ca7.js"></script>
+  <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/repos-overview-0ba96f96cc78.js"></script>
+  <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/primer-react.da836b3f0662dcfeb421.module.css">
+  <link crossorigin="anonymous" media="all" rel="stylesheet" href="https://github.githubassets.com/assets/repos-overview.32a87dc4587d56dcf1eb.module.css">
+  
+  <react-partial partial-name="repos-overview" data-ssr="true" data-attempted-ssr="true" data-catalyst="" class="loaded">
+    
+    <script type="application/json" data-target="react-partial.embeddedData">{"props":{"initialPayload":{"allShortcutsEnabled":false,"path":"/","repo":{"id":918824272,"defaultBranch":"main","name":"SWAv2","ownerLogin":"LightCloud0","currentUserCanPush":false,"isFork":false,"isEmpty":false,"createdAt":"2025-01-19T00:12:47.000Z","ownerAvatar":"https://avatars.githubusercontent.com/u/182565712?v=4","public":true,"private":false,"isOrgOwned":false},"currentUser":null,"refInfo":{"name":"main","listCacheKey":"v0:1737245568.0","canEdit":false,"refType":"branch","currentOid":"441a916499ded187331dbd451d0270402b7dd42c"},"tree":{"items":[{"name":"Static","path":"Static","contentType":"directory"},{"name":"Uploads","path":"Uploads","contentType":"directory"},{"name":"README.md","path":"README.md","contentType":"file"}],"templateDirectorySuggestionUrl":null,"readme":null,"totalCount":3,"showBranchInfobar":false},"fileTree":null,"fileTreeProcessingTime":null,"foldersToFetch":[],"treeExpanded":false,"symbolsExpanded":false,"isOverview":true,"overview":{"banners":{"shouldRecommendReadme":false,"isPersonalRepo":false,"showUseActionBanner":false,"actionSlug":null,"actionId":null,"showProtectBranchBanner":false,"publishBannersInfo":{"dismissActionNoticePath":"/settings/dismiss-notice/publish_action_from_repo","releasePath":"/LightCloud0/SWAv2/releases/new?marketplace=true","showPublishActionBanner":false},"interactionLimitBanner":null,"showInvitationBanner":false,"inviterName":null,"actionsMigrationBannerInfo":{"releaseTags":[],"showImmutableActionsMigrationBanner":false,"initialMigrationStatus":null}},"codeButton":{"contactPath":"/contact","isEnterprise":false,"local":{"protocolInfo":{"httpAvailable":true,"sshAvailable":null,"httpUrl":"https://github.com/LightCloud0/SWAv2.git","showCloneWarning":null,"sshUrl":null,"sshCertificatesRequired":null,"sshCertificatesAvailable":null,"ghCliUrl":"gh repo clone LightCloud0/SWAv2","defaultProtocol":"http","newSshKeyUrl":"/settings/ssh/new","setProtocolPath":"/users/set_protocol"},"platformInfo":{"cloneUrl":"https://desktop.github.com","showVisualStudioCloneButton":false,"visualStudioCloneUrl":"https://windows.github.com","showXcodeCloneButton":false,"xcodeCloneUrl":"xcode://clone?repo=https%3A%2F%2Fgithub.com%2FLightCloud0%2FSWAv2","zipballUrl":"/LightCloud0/SWAv2/archive/refs/heads/main.zip"}},"newCodespacePath":"/codespaces/new?hide_repo_select=true\u0026repo=918824272"},"popovers":{"rename":null,"renamedParentRepo":null},"commitCount":"83","overviewFiles":[{"displayName":"README.md","repoName":"SWAv2","refName":"main","path":"README.md","preferredFileType":"readme","tabName":"README","richText":"\u003carticle class=\"markdown-body entry-content container-lg\" itemprop=\"text\"\u003e\u003chr\u003e\n\u003cdiv class=\"markdown-heading\" dir=\"auto\"\u003e\u003ch1 tabindex=\"-1\" class=\"heading-element\" dir=\"auto\"\u003eSWA v2: Advanced Utility for Steamtools Integration\u003c/h1\u003e\u003ca id=\"user-content-swa-v2-advanced-utility-for-steamtools-integration\" class=\"anchor\" aria-label=\"Permalink: SWA v2: Advanced Utility for Steamtools Integration\" href=\"#swa-v2-advanced-utility-for-steamtools-integration\"\u003e\u003csvg class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"\u003e\u003cpath d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"\u003e\u003c/path\u003e\u003c/svg\u003e\u003c/a\u003e\u003c/div\u003e\n\u003cp dir=\"auto\"\u003eSWA v2 is an advanced utility designed specifically for integration with \u003ca href=\"https://steamtools.net\" rel=\"nofollow\"\u003eSteamtools\u003c/a\u003e, streamlining functionality and enhancing user convenience.\u003c/p\u003e\n\u003cdiv class=\"markdown-heading\" dir=\"auto\"\u003e\u003ch2 tabindex=\"-1\" class=\"heading-element\" dir=\"auto\"\u003e📂 Features\u003c/h2\u003e\u003ca id=\"user-content--features\" class=\"anchor\" aria-label=\"Permalink: 📂 Features\" href=\"#-features\"\u003e\u003csvg class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"\u003e\u003cpath d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"\u003e\u003c/path\u003e\u003c/svg\u003e\u003c/a\u003e\u003c/div\u003e\n\u003cul dir=\"auto\"\u003e\n\u003cli\u003e\u003cstrong\u003eOver 2800+ Games\u003c/strong\u003e: Access a vast library of games, ensuring you have the most up-to-date titles at your fingertips.\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eDLC Support\u003c/strong\u003e: Access and manage downloadable content (DLCs) for your games, ensuring a complete and enriched gaming experience.\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eLauncher Bypasses\u003c/strong\u003e: Enjoy the ability to bypass supported game launchers.\u003c/li\u003e\n\u003c/ul\u003e\n\u003cdiv class=\"markdown-heading\" dir=\"auto\"\u003e\u003ch2 tabindex=\"-1\" class=\"heading-element\" dir=\"auto\"\u003e🎮 Game list\u003c/h2\u003e\u003ca id=\"user-content--game-list\" class=\"anchor\" aria-label=\"Permalink: 🎮 Game List\" href=\"#-game-list\"\u003e\u003csvg class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"\u003e\u003cpath d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"\u003e\u003c/path\u003e\u003c/svg\u003e\u003c/a\u003e\u003c/div\u003e\n\u003cul dir=\"auto\"\u003e\n\u003cli\u003eExplore the full list of available games with over 2800+ titles! \u003ca href=\"https://printedwaste.com/swa\" rel=\"nofollow\"\u003eGamelist\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003cdiv class=\"markdown-heading\" dir=\"auto\"\u003e\u003ch2 tabindex=\"-1\" class=\"heading-element\" dir=\"auto\"\u003e📂 Directories\u003c/h2\u003e\u003ca id=\"user-content--directories\" class=\"anchor\" aria-label=\"Permalink: 📂 Directories\" href=\"#-directories\"\u003e\u003csvg class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"\u003e\u003cpath d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"\u003e\u003c/path\u003e\u003c/svg\u003e\u003c/a\u003e\u003c/div\u003e\n\u003cul dir=\"auto\"\u003e\n\u003cli\u003e\u003cstrong\u003eUploads\u003c/strong\u003e: \u003ca href=\"/LightCloud0/SWAv2/blob/main/Uploads\"\u003eAccess the Uploads Folder\u003c/a\u003e for all application files.\u003c/li\u003e\n\u003c/ul\u003e\n\u003cdiv class=\"markdown-heading\" dir=\"auto\"\u003e\u003ch2 tabindex=\"-1\" class=\"heading-element\" dir=\"auto\"\u003e📦 Download\u003c/h2\u003e\u003ca id=\"user-content--download\" class=\"anchor\" aria-label=\"Permalink: 📦 Download\" href=\"#-download\"\u003e\u003csvg class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"\u003e\u003cpath d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"\u003e\u003c/path\u003e\u003c/svg\u003e\u003c/a\u003e\u003c/div\u003e\n\u003cp dir=\"auto\"\u003eChoose the version that suits your needs:\u003c/p\u003e\n\u003cul dir=\"auto\"\u003e\n\u003cli\u003e\u003cstrong\u003eSWA v2 Setup\u003c/strong\u003e: \u003ca href=\"https://raw.githubusercontent.com/LightCloud0/SWAv2/refs/heads/main/Uploads/SWASetup.exe\" rel=\"nofollow\"\u003eDownload Installer\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eSWA v2 Portable\u003c/strong\u003e: \u003ca href=\"https://raw.githubusercontent.com/LightCloud0/SWAv2/refs/heads/main/Uploads/SWAV2.zip\" rel=\"nofollow\"\u003eDownload Portable Version\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003cdiv class=\"markdown-heading\" dir=\"auto\"\u003e\u003ch2 tabindex=\"-1\" class=\"heading-element\" dir=\"auto\"\u003e🖼️ Screenshots\u003c/h2\u003e\u003ca id=\"user-content-️-screenshots\" class=\"anchor\" aria-label=\"Permalink: 🖼️ Screenshots\" href=\"#️-screenshots\"\u003e\u003csvg class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"\u003e\u003cpath d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"\u003e\u003c/path\u003e\u003c/svg\u003e\u003c/a\u003e\u003c/div\u003e\n\u003cp dir=\"auto\"\u003e\u003ca target=\"_blank\" rel=\"noopener noreferrer\" href=\"/LightCloud0/SWAv2/blob/main/Static/SWAv2.png\"\u003e\u003cimg src=\"/LightCloud0/SWAv2/raw/main/Static/SWAv2.png\" alt=\"Screenshot 2\" style=\"max-width: 100%;\"\u003e\u003c/a\u003e\u003c/p\u003e\n\u003cdiv class=\"markdown-heading\" dir=\"auto\"\u003e\u003ch2 tabindex=\"-1\" class=\"heading-element\" dir=\"auto\"\u003e💬 Our Socials \u0026lt;3\u003c/h2\u003e\u003ca id=\"user-content--our-socials-3\" class=\"anchor\" aria-label=\"Permalink: 💬 Our Socials \u0026lt;3\" href=\"#-our-socials-3\"\u003e\u003csvg class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"\u003e\u003cpath d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"\u003e\u003c/path\u003e\u003c/svg\u003e\u003c/a\u003e\u003c/div\u003e\n\u003cp dir=\"auto\"\u003eStay connected and join the community:\u003c/p\u003e\n\u003cul dir=\"auto\"\u003e\n\u003cli\u003e\u003cstrong\u003eDiscord\u003c/strong\u003e: \u003ca href=\"https://discord.gg/mMxPmzwXHY\" rel=\"nofollow\"\u003eJoin our server\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eTelegram\u003c/strong\u003e: \u003ca href=\"https://t.me/gfklightcloud\" rel=\"nofollow\"\u003eFollow us here\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003chr\u003e\n\u003cdiv class=\"markdown-heading\" dir=\"auto\"\u003e\u003ch2 tabindex=\"-1\" class=\"heading-element\" dir=\"auto\"\u003e🤝 Donations\u003c/h2\u003e\u003ca id=\"user-content--donations\" class=\"anchor\" aria-label=\"Permalink: 🤝 Donations\" href=\"#-donations\"\u003e\u003csvg class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"\u003e\u003cpath d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"\u003e\u003c/path\u003e\u003c/svg\u003e\u003c/a\u003e\u003c/div\u003e\n\u003cp dir=\"auto\"\u003eSupport of SWA v2 by donating cryptocurrency. Your contributions help us enhance and maintain this project!\u003c/p\u003e\n\u003cul dir=\"auto\"\u003e\n\u003cli\u003e\u003cstrong\u003eBitcoin (BTC)\u003c/strong\u003e: \u003ccode\u003ebc1qhsz443as6d3rqqy9h8ur0dm866f26s2854k3gk\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eEthereum (ETH)\u003c/strong\u003e: \u003ccode\u003e0x8320f72d4e34A0627b7cE9dBA6B3a851bb47ffF7\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eTether (USDT)\u003c/strong\u003e (TRC-20): \u003ccode\u003eTBU3C1vqdWawhoNr2SxpwghzbNw6ca7vo2\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eLitecoin (LTC)\u003c/strong\u003e: \u003ccode\u003eltc1qd2zcy3xze40sjwgkw8f34xr6yyz4l96xxkpduy\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eDogecoin (DOGE)\u003c/strong\u003e: \u003ccode\u003eDQuf6SdUQMfLtjQvvWzGQVJBrNWBAWSKb7\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eCardano (ADA)\u003c/strong\u003e: \u003ccode\u003eaddr1q87kanjzqurfv0q2heddhpfjx4l9zzdlzcun2ae3pd5undwzrlff3z7us3n032yqfn0c9zscl6leyh6fyafks0kwcskqy3esp9\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eRipple (XRP)\u003c/strong\u003e: \u003ccode\u003erBwTwhLvp2pr6gYLwhVTL2hRaeC3wY8tYK\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003ePolkadot (DOT)\u003c/strong\u003e: \u003ccode\u003e1pTkkdASubn3bKiGQs2zDpuDZ4CiZUFjVU6bDu879HiQo2S\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eBinance Coin (BNB)\u003c/strong\u003e: \u003ccode\u003e0x8320f72d4e34A0627b7cE9dBA6B3a851bb47ffF7\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eTon Coin (TON)\u003c/strong\u003e: \u003ccode\u003eUQAEFXnUV4by1zg6VEEz-sCIMP-rMT0kZiXFgSWlV9E4LsU5\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eSolana (SOL)\u003c/strong\u003e: \u003ccode\u003e8LosvUWwgUrzFZVenaY4X1vcfoqdnu9whGv1Jp8jbDHE\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003ePolygon (MATIC)\u003c/strong\u003e: \u003ccode\u003e0x8320f72d4e34A0627b7cE9dBA6B3a851bb47ffF7\u003c/code\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp dir=\"auto\"\u003eYour generosity keeps SWA v2 alive. Thank you for supporting us! 💖\u003c/p\u003e\n\u003chr\u003e\n\u003cdiv class=\"markdown-heading\" dir=\"auto\"\u003e\u003ch3 tabindex=\"-1\" class=\"heading-element\" dir=\"auto\"\u003eSpecial Thanks\u003c/h3\u003e\u003ca id=\"user-content-special-thanks\" class=\"anchor\" aria-label=\"Permalink: Special Thanks\" href=\"#special-thanks\"\u003e\u003csvg class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"\u003e\u003cpath d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"\u003e\u003c/path\u003e\u003c/svg\u003e\u003c/a\u003e\u003c/div\u003e\n\u003cp dir=\"auto\"\u003eA special thanks to \u003cstrong\u003e\u003ca href=\"https://printedwaste.com/\" rel=\"nofollow\"\u003ePrintedWaste\u003c/a\u003e\u003c/strong\u003e.\u003c/p\u003e\n\u003chr\u003e\n\u003cp dir=\"auto\"\u003eThank you for using SWA v2! 🚀\u003c/p\u003e\n\u003c/article\u003e","loaded":true,"timedOut":false,"errorMessage":null,"headerInfo":{"toc":[{"level":1,"text":"SWA v2: Advanced Utility for Steamtools Integration","anchor":"swa-v2-advanced-utility-for-steamtools-integration","htmlText":"SWA v2: Advanced Utility for Steamtools Integration"},{"level":2,"text":"📂 Features","anchor":"-features","htmlText":"📂 Features"},{"level":2,"text":"🎮 Game List","anchor":"-game-list","htmlText":"🎮 Game List"},{"level":2,"text":"📂 Directories","anchor":"-directories","htmlText":"📂 Directories"},{"level":2,"text":"📦 Download","anchor":"-download","htmlText":"📦 Download"},{"level":2,"text":"🖼️ Screenshots","anchor":"️-screenshots","htmlText":"🖼️ Screenshots"},{"level":2,"text":"💬 Our Socials \u003c3","anchor":"-our-socials-3","htmlText":"💬 Our Socials \u0026lt;3"},{"level":2,"text":"🤝 Donations","anchor":"-donations","htmlText":"🤝 Donations"},{"level":3,"text":"Special Thanks","anchor":"special-thanks","htmlText":"Special Thanks"}],"siteNavLoginPath":"/login?return_to=https%3A%2F%2Fgithub.com%2FLightCloud0%2FSWAv2"}}],"overviewFilesProcessingTime":0}},"appPayload":{"helpUrl":"https://docs.github.com","findFileWorkerPath":"/assets-cdn/worker/find-file-worker-2e45fb5767a8.js","findInFileWorkerPath":"/assets-cdn/worker/find-in-file-worker-b37f186d2384.js","githubDevUrl":null,"enabled_features":{"copilot_workspace":null,"code_nav_ui_events":false,"overview_shared_code_dropdown_button":false,"react_blob_overlay":false,"copilot_conversational_ux_embedding_update":false,"copilot_smell_icebreaker_ux":true,"accessible_code_button":true}}}}</script>
+    <div data-target="react-partial.reactRoot"> <!-- --> <!-- --> <div class="Box-sc-g0xbh4-0 iVEunk"><div class="Box-sc-g0xbh4-0 jzuOtQ"><div class="Box-sc-g0xbh4-0 bGojzy"></div></div><div class="Box-sc-g0xbh4-0 iNSVHo"><div class="Box-sc-g0xbh4-0 bVgnfw"><div class="Box-sc-g0xbh4-0 CEgMp"></div></div></div><div class="Box-sc-g0xbh4-0 vIPPs"><div class="Box-sc-g0xbh4-0 csrIcr"><div class="Box-sc-g0xbh4-0 eIKYQa"><div itemscope="" itemtype="https://schema.org/abstract" class="Box-sc-g0xbh4-0 dJnomT"><h2 class="_VisuallyHidden__VisuallyHidden-sc-11jhm7a-0 brGdpi">The Best Tools For Steam</h2><nav class="UnderlineTabbedInterface__StyledComponentUnderlineWrapper-sc-4ilrg0-0 durGbC" aria-label="Repository files"><ul role="list" class="UnderlineTabbedInterface__StyledComponentUnderlineItemList-sc-4ilrg0-1 ehEdWC"><li class="Box-sc-g0xbh4-0 hUCRAk"><a href="#" aria-current="page" class="UnderlineTabbedInterface__StyledUnderlineItem-sc-4ilrg0-2 HZeLY"><span data-component="icon"><svg aria-hidden="true" focusable="false" class="octicon octicon-book" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible"><path d="M0 1.75A.75.75 0 0 1 .75 1h4.253c1.227 0 2.317.59 3 1.501A3.743 3.743 0 0 1 11.006 1h4.245a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.507a2.25 2.25 0 0 0-1.591.659l-.622.621a.75.75 0 0 1-1.06 0l-.622-.621A2.25 2.25 0 0 0 5.258 13H.75a.75.75 0 0 1-.75-.75Zm7.251 10.324.004-5.073-.002-2.253A2.25 2.25 0 0 0 5.003 2.5H1.5v9h3.757a3.75 3.75 0 0 1 1.994.574ZM8.755 4.75l-.004 7.322a3.752 3.752 0 0 1 1.992-.572H14.5v-9h-3.495a2.25 2.25 0 0 0-2.25 2.25Z"></path></svg></span><span data-component="text" data-content="README"></span></a></li></ul></nav><button style="--button-color:fg.subtle" type="button" aria-label="Outline" aria-haspopup="true" aria-expanded="false" tabindex="0" class="Box-sc-g0xbh4-0 VrhUk prc-Button-ButtonBase-c50BI" data-loading="false" data-size="medium" data-variant="invisible" aria-describedby=":Rr9ab:-loading-announcement" id=":Rr9ab:"><svg aria-hidden="true" focusable="false" class="octicon octicon-list-unordered" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible"><path d="M5.75 2.5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5Zm0 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5Zm0 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5ZM2 14a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm1-6a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM2 4a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg></button></div><div class="Box-sc-g0xbh4-0 QkQOb js-snippet-clipboard-copy-unpositioned undefined" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><hr>
+  <div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto">Tools v2: Advanced Utility for Tools Integration</h1><a id="user-content-swa-v2-advanced-utility-for-steamtools-integration" class="anchor" aria-label="Permalink: SWA v2: Advanced Utility for Steamtools Integration" href="#swa-v2-advanced-utility-for-steamtools-integration"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+  <p dir="auto">Tools v2 is an advanced utility designed specifically for integration with Steamtools</a>, streamlining functionality and enhancing user convenience.</p>
+  <div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto">📂 Features</h2><a id="user-content--features" class="anchor" aria-label="Permalink: 📂 Features" href="#-features"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+  <ul dir="auto">
+  <li><strong>Games</strong>: Access a vast library of games, ensuring you have the most up-to-date titles at your fingertips.</li>
+  <li><strong>DLC Support</strong>: Access and manage downloadable content (DLCs) for your games, ensuring a complete and enriched gaming experience.</li>
+  <li><strong>Launcher Bypasses</strong>: Enjoy the ability to bypass supported game launchers.</li>
+  </ul>
+  <div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto">🎮 Game List and App Id</h2><a id="user-content--game-list" class="anchor" aria-label="Permalink: 🎮 Game List" href="#-game-list"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+  <ul dir="auto">
+  <li>Explore the full list of available games with titles! <a href="https://docs.google.com/document/u/1/d/e/2PACX-1vRaIma_7pCBBaCpF0o_M9GjzxKUap2GJX7TtYjHa7wx0JGtp3e_rd80ZnFTMgZJ2kJEP2o3rKBxieLU/pub" rel="nofollow">Gamelist</a></li>
+  </ul>
+  <li>Here the APP ID Games you can download <a href="https://steamdb.info/" rel="nofollow">SteamDB</a></li>
+  
+  <div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto">📦 Download</h2><a id="user-content--download" class="anchor" aria-label="Permalink: 📦 Download" href="#-download"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+  <p dir="auto">the version that suits your needs:</p><ul dir="auto">
+  <li>
+    
+    <form  onsubmit="return passcheck()">
+      <div class="error-text">
+          
+      </div>
+      <span style="font-size: 22px; font-weight: bold; font-family: 'Noto Sans', sans-serif; margin-right: 25px;">Enter Password : </span>
+      <input type="Password" class="css-input" required id="pass1">
+      <input type="submit" class="classname" value="DOWNLOAD">
+      
+      <script>
+          
+          const errorText = document.querySelector(".error-text");
+          var Password ="p455w0rd";
+          function passcheck(){
+              if (document.getElementById('pass1').value != Password) {
+                  errorText.style.display = "block";
+                  errorText.textContent = "ERROR! Wrong Password.";
+                  return false;
+              }
+              if (document.getElementById('pass1').value == Password) {
+                  window.open("file:///D:/ToolsSteam/ToolsSetup.rar", "_blank");
+              }
+      
+          }
+          
+      </script>
+    <hr>
+  <p dir="auto">Thank you for using TOOLS v2! 🚀</p>
+  </article></div></div></div></div></div> <!-- --> <!-- --> <script type="application/json" id="__PRIMER_DATA_:R0:__">{"resolvedServerColorMode":"night"}</script></div>
+  </react-partial>
+  
+        <input type="hidden" data-csrf="true" value="5EMkYL/Cp3qb6M5J1A0cFb8I5jGxgsCUSNM7NAneImfvtpxWXNN8dc4t3IUf/Ce+ptYcBEtf6FKTyFY5I6LMtA==">
+  </div>
+    <div data-view-component="true" class="Layout-sidebar">      
+  
+        <div class="BorderGrid about-margin" data-pjax="">
+          <div class="BorderGrid-row">
+            <div class="BorderGrid-cell">
+              <div class="hide-sm hide-md">
+    <h2 class="mb-3 h4">About</h2>
+  
+        <p class="f4 my-3">Tools v2 is an advanced utility designed specifically for integration with Steamtools, streamlining functionality and enhancing user convenience.
+        </p>
+  
+  
+      <h3 class="sr-only">Resources</h3>
+      <div class="mt-2">
+        <a class="Link--muted" data-analytics-event="{&quot;category&quot;:&quot;Repository Overview&quot;,&quot;action&quot;:&quot;click&quot;,&quot;label&quot;:&quot;location:sidebar;file:readme&quot;}" href="#readme-ov-file">
+          <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-book mr-2">
+      <path d="M0 1.75A.75.75 0 0 1 .75 1h4.253c1.227 0 2.317.59 3 1.501A3.743 3.743 0 0 1 11.006 1h4.245a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.507a2.25 2.25 0 0 0-1.591.659l-.622.621a.75.75 0 0 1-1.06 0l-.622-.621A2.25 2.25 0 0 0 5.258 13H.75a.75.75 0 0 1-.75-.75Zm7.251 10.324.004-5.073-.002-2.253A2.25 2.25 0 0 0 5.003 2.5H1.5v9h3.757a3.75 3.75 0 0 1 1.994.574ZM8.755 4.75l-.004 7.322a3.752 3.752 0 0 1 1.992-.572H14.5v-9h-3.495a2.25 2.25 0 0 0-2.25 2.25Z"></path>
+  </svg>
+          Readme
+  </a>    </div>
+  
+    
+  
+  
+  
+    <include-fragment src="/LightCloud0/SWAv2/hovercards/citation/sidebar_partial?tree_name=main" class="is-error">
+    </include-fragment>
+  
+    <div class="mt-2">
+      <a href="/LightCloud0/SWAv2/activity" data-view-component="true" class="Link Link--muted"><svg text="gray" aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-pulse mr-2">
+      <path d="M6 2c.306 0 .582.187.696.471L10 10.731l1.304-3.26A.751.751 0 0 1 12 7h3.25a.75.75 0 0 1 0 1.5h-2.742l-1.812 4.528a.751.751 0 0 1-1.392 0L6 4.77 4.696 8.03A.75.75 0 0 1 4 8.5H.75a.75.75 0 0 1 0-1.5h2.742l1.812-4.529A.751.751 0 0 1 6 2Z"></path>
+  </svg>
+        <span class="color-fg-muted">Activity</span></a>  </div>
+  
+  
+    <h3 class="sr-only">Stars</h3>
+    <div class="mt-2">
+      <a href="/LightCloud0/SWAv2/stargazers" data-view-component="true" class="Link Link--muted"><svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-star mr-2">
+      <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"></path>
+  </svg>
+        <strong>12</strong>
+        stars</a>  </div>
+  
+    <h3 class="sr-only">Watchers</h3>
+    <div class="mt-2">
+      <a href="/LightCloud0/SWAv2/watchers" data-view-component="true" class="Link Link--muted"><svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-eye mr-2">
+      <path d="M8 2c1.981 0 3.671.992 4.933 2.078 1.27 1.091 2.187 2.345 2.637 3.023a1.62 1.62 0 0 1 0 1.798c-.45.678-1.367 1.932-2.637 3.023C11.67 13.008 9.981 14 8 14c-1.981 0-3.671-.992-4.933-2.078C1.797 10.83.88 9.576.43 8.898a1.62 1.62 0 0 1 0-1.798c.45-.677 1.367-1.931 2.637-3.022C4.33 2.992 6.019 2 8 2ZM1.679 7.932a.12.12 0 0 0 0 .136c.411.622 1.241 1.75 2.366 2.717C5.176 11.758 6.527 12.5 8 12.5c1.473 0 2.825-.742 3.955-1.715 1.124-.967 1.954-2.096 2.366-2.717a.12.12 0 0 0 0-.136c-.412-.621-1.242-1.75-2.366-2.717C10.824 4.242 9.473 3.5 8 3.5c-1.473 0-2.825.742-3.955 1.715-1.124.967-1.954 2.096-2.366 2.717ZM8 10a2 2 0 1 1-.001-3.999A2 2 0 0 1 8 10Z"></path>
+  </svg>
+        <strong>1023</strong>
+        watching</a>  </div>
+  
+    <h3 class="sr-only">Forks</h3>
+    <div class="mt-2">
+      <a href="/LightCloud0/SWAv2/forks" data-view-component="true" class="Link Link--muted"><svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-repo-forked mr-2">
+      <path d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z"></path>
+  </svg>
+        <strong>45</strong>
+        Downloads</a>  </div>
+  
+  
+          
+          
+              <div class="BorderGrid-row">
+                <div class="BorderGrid-cell">
+  
+  
+  
+                </div>
+              </div>
+  
+          
+              <div class="BorderGrid-row" hidden="">
+                <div class="BorderGrid-cell">
+                  <include-fragment src="/LightCloud0/SWAv2/used_by_list" accept="text/fragment+html" class="is-error">
+  </include-fragment>
+                </div>
+              </div>
+  
+          
+          
+          
+                </div>
+  </div>
+    
+  </div></div>
+  
+    </div>
+  
+  
+    </div>
+  
+  </turbo-frame>
+  
+  
+      </main>
+    </div>
+  
+    </div>
+  
+            <footer class="footer pt-8 pb-6 f6 color-fg-muted p-responsive" role="contentinfo">
+    <h2 class="sr-only">Footer</h2>
+  
+    
+  
+  
+    <div class="d-flex flex-justify-center flex-items-center flex-column-reverse flex-lg-row flex-wrap flex-lg-nowrap">
+      <div class="d-flex flex-items-center flex-shrink-0 mx-2">
+        <a aria-label="Homepage" title="GitHub" class="footer-octicon mr-2" href="https://github.com">
+          <svg aria-hidden="true" height="24" viewBox="0 0 24 24" version="1.1" width="24" data-view-component="true" class="octicon octicon-mark-github">
+      <path d="M12.5.75C6.146.75 1 5.896 1 12.25c0 5.089 3.292 9.387 7.863 10.91.575.101.79-.244.79-.546 0-.273-.014-1.178-.014-2.142-2.889.532-3.636-.704-3.866-1.35-.13-.331-.69-1.352-1.18-1.625-.402-.216-.977-.748-.014-.762.906-.014 1.553.834 1.769 1.179 1.035 1.74 2.688 1.25 3.349.948.1-.747.402-1.25.733-1.538-2.559-.287-5.232-1.279-5.232-5.678 0-1.25.445-2.285 1.178-3.09-.115-.288-.517-1.467.115-3.048 0 0 .963-.302 3.163 1.179.92-.259 1.897-.388 2.875-.388.977 0 1.955.13 2.875.388 2.2-1.495 3.162-1.179 3.162-1.179.633 1.581.23 2.76.115 3.048.733.805 1.179 1.825 1.179 3.09 0 4.413-2.688 5.39-5.247 5.678.417.36.776 1.05.776 2.128 0 1.538-.014 2.774-.014 3.162 0 .302.216.662.79.547C20.709 21.637 24 17.324 24 12.25 24 5.896 18.854.75 12.5.75Z"></path>
+  </svg>
+  </a>
+        <span>
+          © 2025 GitHub,&nbsp;Inc.
+        </span>
+      </div>
+  
+      <nav aria-label="Footer">
+        <h3 class="sr-only" id="sr-footer-heading">Footer navigation</h3>
+  
+        <ul class="list-style-none d-flex flex-justify-center flex-wrap mb-2 mb-lg-0" aria-labelledby="sr-footer-heading">
+  
+            <li class="mx-2">
+              <a data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to Terms&quot;,&quot;label&quot;:&quot;text:terms&quot;}" href="https://docs.github.com/site-policy/github-terms/github-terms-of-service" data-view-component="true" class="Link--secondary Link">Terms</a>
+            </li>
+  
+            <li class="mx-2"><br></li><li class="mx-2">
+  </li>
+  
+        </ul>
+      </nav>
+    </div>
+  </footer>
+  
+  
+  
+      <ghcc-consent id="ghcc" class="position-fixed bottom-0 left-0" style="z-index: 999999" data-initial-cookie-consent-allowed="" data-cookie-consent-required="false" data-catalyst=""></ghcc-consent>
+  
+  
+  
+    <div id="ajax-error-message" class="ajax-error-message flash flash-error" hidden="">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+      <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+  </svg>
+      <button type="button" class="flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x">
+      <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+  </svg>
+      </button>
+      You can’t perform that action at this time.
+    </div>
+  
+      <template id="site-details-dialog">
+    <details class="details-reset details-overlay details-overlay-dark lh-default color-fg-default hx_rsm" open="">
+      <summary role="button" aria-label="Close dialog"></summary>
+      <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast hx_rsm-dialog hx_rsm-modal">
+        <button class="Box-btn-octicon m-0 btn-octicon position-absolute right-0 top-0" type="button" aria-label="Close dialog" data-close-dialog="">
+          <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x">
+      <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+  </svg>
+        </button>
+        <div class="octocat-spinner my-6 js-details-dialog-spinner"></div>
+      </details-dialog>
+    </details>
+  </template>
+  
+      <div class="Popover js-hovercard-content position-absolute" style="display: none; outline: none;">
+    <div class="Popover-message Popover-message--bottom-left Popover-message--large Box color-shadow-large" style="width:360px;"></div>
+  </div>
+  
+      <template id="snippet-clipboard-copy-button">
+    <div class="zeroclipboard-container position-absolute right-0 top-0">
+      <clipboard-copy aria-label="Copy" class="ClipboardButton btn js-clipboard-copy m-2 p-0" data-copy-feedback="Copied!" data-tooltip-direction="w">
+        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon m-2">
+      <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+  </svg>
+        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none m-2">
+      <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+  </svg>
+      </clipboard-copy>
+    </div>
+  </template>
+  <template id="snippet-clipboard-copy-button-unpositioned">
+    <div class="zeroclipboard-container">
+      <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w">
+        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+      <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+  </svg>
+        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+      <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+  </svg>
+      </clipboard-copy>
+    </div>
+  </template>
+  
+  
+  
+  
+      </div>
+      
+  
+  </body></html>
